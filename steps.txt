@@ -1,0 +1,92 @@
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+
+
+//https://dev.to/wandealves/migrations-com-typeorm-no-nodejs-4i80
+# yarn add --dev yarn-upgrade-all
+# yarn install (for all dependencies)
+# yarn add <package-name> -s
+yarn init -y
+yarn add typescript ts-node-dev @types/node -D
+yarn tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
+yarn add express cors express-async-errors
+yarn add -D @types/express @types/cors
+yarn add tsconfig-paths
+
+yarn add typeorm
+yarn add reflect-metadata
+yarn add pg
+yarn add mysql
+yarn add mssql
+yarn add class-transformer
+
+yarn add -D ts-node-dev
+yarn add -D tsconfig-paths
+
+yarn add bcryptjs
+yarn add -D @type/bcryptjs
+
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+
+yarn add multer
+yarn add -D @types/multer
+
+yarn add class-transformer
+
+#Rodar docker
+  docker run --name postgres -e POSTGRES_PASSWORD=masterkey -p 5432:5432 -d postgres
+
+#Verificar
+  docker ps
+
+
+yarn typeorm migration:create -n CreateProducts
+yarn typeorm migration:run
+
+yarn add celebrate
+
+yarn typeorm migration:create -n CreateUsers
+yarn typeorm migration:run
+
+yarn typeorm migration:create -n CreateUserTokens
+yarn typeorm migration:run
+
+yarn add axios
+yarn add -D @types/axios
+
+yarn add date-fns
+yarn add -D @types/date-fns
+
+yarn add nodemailer
+yarn add -D @types/nodemailer
+
+yarn add handlebars
+yarn add -D @types/handlebars
+
+yarn typeorm migration:create -n CreateCustomers
+yarn typeorm migration:run
+
+yarn typeorm migration:create -n AddCustomerIdToOrders
+yarn typeorm migration:run
+
+yarn typeorm migration:create -n CreateOrdersProducts
+yarn typeorm migration:run
+
+yarn typeorm migration:create -n AddOrderIdToOrdersProducts
+yarn typeorm migration:run
+
+yarn typeorm migration:create -n AddProductIdToOrdersProducts
+yarn typeorm migration:
+
+yarn add typeorm-pagination
+yarn add -D @types/date-fnss
+
+yarn add dotenv
+
+#Rodar redis
+  docker run --name redis -p 6379:6379 -d -t redis:alpine
+
+yarn add redis ioredis
+yarn add @types/redis @types/ioredis -D
+
